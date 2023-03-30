@@ -10,6 +10,9 @@
   font-size: $font-size-small;
   padding: $padding-header;
 }
+.mobile-title {
+  display: none;
+}
 .logo img {
   height: $logo-height;
 }
@@ -43,6 +46,9 @@ form {
   display: flex;
   list-style: none;
   grid-gap: $gap-links;
+}
+.ie {
+  font-size: $font-size-exsmall;
 }
 
 button {
@@ -100,19 +106,22 @@ nav {
   display: flex;
 }
 
-@media (max-width: 45em) {
+@media (max-width: 48em) {
   .header {
-    color: steelblue;
-    font-weight: 700;
+    color: $font-color-alternative;
     font-size: $font-size-medium;
-    padding: $padding-header;
   }
   .mobile-title {
+    display: block;
     font-size: $font-size-small;
     padding: $padding-header;
   }
+  nav {
+    background-color: pink;
+  }
   .logo img {
     height: 3.75vh;
+    padding-top: 0.5vh;
   }
   .search__btn {
     font-family: 'League Gothic', sans-serif;
@@ -129,16 +138,16 @@ nav {
     z-index: 9998;
     background: url('../imgs/hamburger.png');
     background-repeat: no-repeat;
-    width: 4rem;
+    width: 1.5rem;
     border: 0;
     aspect-ratio: 1;
-    top: 2rem;
-    right: 1rem;
+    top: 1.25rem;
+    right: 1.25rem;
   }
   .primary__navigation {
     position: fixed;
     z-index: 9997;
-    inset: 0 0 0 30%;
+    inset: 0 0 0 0%;
 
     flex-direction: column;
     padding: min(30vh, 10rem) 2em;
@@ -157,7 +166,8 @@ nav {
 
   .links {
     flex-direction: column;
-    grid-gap: $gap-links;
+    padding: 5vh;
+    grid-gap: $gap-links + 5vh;
   }
   form {
     flex-direction: column;

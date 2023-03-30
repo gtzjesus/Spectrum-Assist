@@ -11,8 +11,12 @@ $padding-header-mobile: 2.5vh;
 $background: #003057;
 
 $font-color: #ffff;
+$font-color-alternative: #003057;
 
-$font-size-small: 1.45rem;
-$font-size-medium: 2.45rem;
+$font-size-exsmall: 1.45rem;
+$font-size-small: 1.75rem;
+$font-size-medium: 1.55rem;
+$font-size-large: 2.55rem;
 
 @import 'header';
+@import 'general';

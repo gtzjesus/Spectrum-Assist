@@ -28,7 +28,7 @@ class HeaderView extends View {
         data-visible="false"
         class="primary__navigation flex">
         <div class="mobile-title">
-            <span>Start by searching for a tutorial (i.e. like for like swap dvr)</span>
+            <span>Start by searching for a tutorial <br /> <span class="ie">(i.e. like for like swap dvr)</span></span>
         </div>
         <div class="search">
             <form>
