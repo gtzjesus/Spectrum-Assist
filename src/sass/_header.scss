@@ -31,33 +31,29 @@ form {
 .search__btn {
   font-family: 'League Gothic', sans-serif;
   color: $font-color;
-  font-size: $font-size-small;
+  font-size: $font-size-medium;
   display: flex;
-  align-items: center;
   padding: 0.15rem 1rem;
   text-transform: uppercase;
-  grid-gap: 1vh;
+  grid-gap: 0.5vh;
+}
+.btn {
+  padding: 0.15rem 1rem;
 }
 .links__container {
-  list-style: none;
   background-color: $background;
 }
 .links {
   display: flex;
-  list-style: none;
   grid-gap: $gap-links;
+  padding: 2rem;
 }
 .ie {
   font-size: $font-size-exsmall;
 }
 
-button {
-  width: 100%;
-  max-width: 300px;
-}
 input {
   width: 100%;
-  display: flex;
   padding: 15px;
   background-color: white;
   border: 7.5px solid black;
@@ -65,33 +61,11 @@ input {
   font-size: 18px;
   box-shadow: 10px 1px 0px 5px, 0px -1px 0px 2px rgba(7, 7, 7, 0.62);
   height: 58px;
-  transform: skew(-3deg, 1deg);
-
+  transform: skew(-3deg, 3deg);
   text-transform: uppercase;
   &:focus,
   &:valid {
     outline: none;
-    ~ ul li {
-      @for $i from 1 through 6 {
-        &:nth-child(#{$i}) {
-          &::before {
-            filter: blur(20px);
-            transform: translate(0, -35px) rotate(-210deg);
-          }
-          &::after {
-            filter: blur(0);
-            transform: scale(1) rotate(0);
-          }
-        }
-      }
-      @for $i from 1 through 6 {
-        &:nth-child(#{$i}) {
-          &::after {
-            transition-delay: 200ms + ($i * 200ms);
-          }
-        }
-      }
-    }
   }
 }
 
@@ -102,11 +76,8 @@ input {
 .mobile__nav__toggle {
   display: none;
 }
-nav {
-  display: flex;
-}
 
-@media (max-width: 48em) {
+@media (max-width: 54em) {
   .header {
     color: $font-color-alternative;
     font-size: $font-size-medium;
@@ -116,20 +87,9 @@ nav {
     font-size: $font-size-small;
     padding: $padding-header;
   }
-  .logo img {
-    height: 3.75vh;
-    padding-top: 0.5vh;
-  }
-
   .search__btn {
-    font-family: 'League Gothic', sans-serif;
-    color: $font-color;
     font-size: $font-size-large;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-transform: uppercase;
-    grid-gap: 1.5vh;
+    grid-gap: 3.5vh;
   }
   .mobile__nav__toggle {
     display: block;
@@ -149,7 +109,7 @@ nav {
     inset: 0 0 0% 10%;
     flex-direction: column;
     padding: min(10vh, 30rem) 1.5em;
-    grid-gap: 2.5em;
+    grid-gap: 1.5em;
 
     transform: translateX(100%);
     transition: transform 1250ms ease-out;
