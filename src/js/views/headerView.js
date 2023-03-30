@@ -32,11 +32,14 @@ class HeaderView extends View {
         </div>
         <div class="search">
             <form>
+            <div>
             <input
                 type="text"
                 class="search__field"
                 placeholder="tutorials"
             />
+            </div>
+            <div>
             <button
             type="submit" class="btn">
                 <div class="search__btn">
@@ -44,6 +47,7 @@ class HeaderView extends View {
                     <span><img src="${search}" /></span>
                 </div>
             </button>
+            </div>
             </form>
         </div>
 
