@@ -2,7 +2,7 @@
   "name": "Spectrum Assist",
   "version": "1.0.0",
   "description": "A web application, Spectrum Assist, whose mission is to guide Spectrum technicians through various troubleshooting processes. This software will aid all Spectrum agents in need of assistance.",
-  "main": "index.js",
+  "default": "index.html",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html --dist-dir ./dist"
