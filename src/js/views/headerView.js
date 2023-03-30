@@ -10,27 +10,45 @@ class HeaderView extends View {
         <div class="logo">
             <img src="${spectrum}" />
         </div>
-        <div class="search">
+
+        <button
+          class="mobile__nav__toggle"
+          aria-controls="primary__navigation"
+          aria-expanded="false"
+        ></button>
         
+        <nav   
+        id="primary__navigation"
+        data-visible="false"
+        class="primary__navigation flex">
+        <div class="search">
             <form>
             <input
                 type="text"
                 class="search__field"
-                placeholder="Search over 1,000,000 tutorials..."
+                placeholder="tutorials"
             />
-            <button class="btn">
-                <span>Search</span>
-                <img src="${search}" />
+            <button
+             
+            type="submit" class="btn">
+                <div class="search__btn">
+                    <span>search</span>
+                    <span><img src="${search}" /></span>
+                </div>
             </button>
             </form>
         </div>
+
         <div class="links__container">
             <ul class="links">
-                <li class=""><a>tutorials</a></li>
-                <li class=""><a>bookmarks</a></li>
+                <li class="link"><a>tutorials</a></li>
+                <li class="link"><a>bookmarks</a></li>
             </ul>
         </div>
+        <nav>
+
     `;
   }
 }
+
 export default new HeaderView();

@@ -1,12 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+
 $application-height: 100vh -2 * 4vh;
 $logo-height: 5vh;
 
 $gap-links: 2.5vh;
 
 $padding-header: 1.5vh;
+$padding-header-mobile: 2.5vh;
 
 $background: #527ec1;
 
 $font-color: #ffff;
+
+$font-size-small: 1.45rem;
+$font-size-medium: 2.45rem;
 
 @import 'header';
