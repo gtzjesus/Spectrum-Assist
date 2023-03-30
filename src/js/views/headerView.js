@@ -21,11 +21,15 @@ class HeaderView extends View {
           aria-controls="primary__navigation"
           aria-expanded="false"
         ></button>
+
         
         <nav   
         id="primary__navigation"
         data-visible="false"
         class="primary__navigation flex">
+        <div class="mobile-title">
+            <span>Start by searching for a tutorial (i.e. like for like swap dvr)</span>
+        </div>
         <div class="search">
             <form>
             <input
@@ -34,7 +38,6 @@ class HeaderView extends View {
                 placeholder="tutorials"
             />
             <button
-             
             type="submit" class="btn">
                 <div class="search__btn">
                     <span>search</span>
