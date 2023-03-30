@@ -1,0 +1,39 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  background-color: $background;
+  justify-content: space-around;
+  align-items: center;
+  text-transform: uppercase;
+  color: $font-color;
+  padding: $padding-header;
+}
+.logo img {
+  height: $logo-height;
+}
+.search {
+  display: flex;
+  flex-direction: row;
+}
+.btn {
+  border: solid black 1px;
+  background-color: $background;
+}
+form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.btn img {
+  padding: 0;
+  margin: 0;
+}
+.links__container {
+  list-style: none;
+}
+.links {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  grid-gap: $gap-links;
+}
