@@ -1,5 +1,6 @@
 .preview {
   font-family: 'League Gothic', sans-serif;
+  border-bottom: 2.5px solid $background;
 
   &__link {
     &:link,
@@ -7,9 +8,9 @@
       display: flex;
       flex-direction: row;
       align-items: center;
-      padding: 0.25rem;
+      padding: 0.35rem;
       transition: all 0.3s;
-      border-right: 5px solid $background;
+      border-right: 2.5px solid $background;
       text-decoration: none;
     }
 
@@ -73,10 +74,10 @@
     font-weight: 400;
 
     // This is how text is truncated!
-    // text-overflow: ellipsis;
-    // max-width: 30rem;
-    // white-space: nowrap;
-    // overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 30rem;
+    white-space: nowrap;
+    overflow: hidden;
   }
 
   &__publisher {
