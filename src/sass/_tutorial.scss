@@ -4,7 +4,7 @@
   ///////////
   // FIGURE
   &__fig {
-    height: 32rem;
+    height: 18rem;
     position: relative;
     // transform: scale(1.04) translateY(-1px);
     transform-origin: top;
@@ -17,8 +17,12 @@
       position: absolute;
       top: 0;
       left: 0;
-      background-image: linear-gradient(to right bottom, red, blue);
-      opacity: 0.6;
+      background-image: linear-gradient(
+        to right bottom,
+        $background,
+        $font-color
+      );
+      opacity: 0.4;
     }
   }
 
@@ -32,21 +36,25 @@
   &__title {
     position: absolute;
     bottom: 0;
+    top: 0;
     left: 50%;
-    transform: translate(-50%, 20%) skewY(-6deg);
+    transform: translate(-50%, 10%);
     color: #fff;
-    font-weight: 700;
-    font-size: 3.25rem;
+    font-size: $font-size-exsmall;
     text-transform: uppercase;
-    width: 50%;
-    line-height: 1.95;
+    width: 65%;
+    line-height: 2.25;
     text-align: center;
 
     span {
       -webkit-box-decoration-break: clone;
       box-decoration-break: clone;
-      padding: 1.3rem 2rem;
-      background-image: linear-gradient(to right bottom, green, lightgreen);
+      padding: 1.3rem 4rem;
+      background-image: linear-gradient(
+        to right bottom,
+        $background,
+        $font-color
+      );
     }
   }
 
