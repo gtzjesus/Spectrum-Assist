@@ -14,12 +14,55 @@
     ></script>
     <title>Spectrum Assist</title>
   </head>
-  <header class="header"></header>
-
   <body>
+    <header class="header">
+        <div class="logo">
+            <img src="./src/imgs/logo.png" />
+        </div>
+
+        <button
+          class="mobile__nav__toggle"
+          aria-controls="primary__navigation"
+          aria-expanded="false"
+        ></button>
+
+        
+        <nav   
+        id="primary__navigation"
+        data-visible="false"
+        class="primary__navigation flex">
+        <div class="mobile-title">
+            <span>Start by searching for a tutorial <br /> <span class="ie">(i.e. like for like swap dvr)</span></span>
+            
+        </div>
+            <form class="search">
+            <input
+                type="text"
+                class="search__field"
+                placeholder="tutorials..."
+            />
+            <button
+             class="btn search__field" type="submit">
+                <div class="search__btn">
+                    <span>search</span>
+                </div>
+            </button>
+            </form>
+
+        <div class="links__container">
+            <ul class="links">
+                <li class="link"><a>tutorials</a></li>
+                <li class="link"><a>bookmarks</a></li>
+            </ul>
+        </div>
+        <nav>
+
+    </header>
+
     <div class="app">
       <section class="results"></section>
       <section class="tutorial"></section>
     </div>
+    
   </body>
 </html>

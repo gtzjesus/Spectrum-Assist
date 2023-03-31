@@ -4,28 +4,28 @@
     &:visited {
       display: flex;
       align-items: center;
-      padding: 1.5rem 3.25rem;
+      padding: 0.75rem 0.5rem;
       transition: all 0.3s;
-      border-right: 1px solid #fff;
+      border-right: 10px solid $background;
       text-decoration: none;
     }
 
     &:hover {
-      background-color: #ffff;
-      transform: translateY(-2px);
+      background-color: $background;
+      transform: translateY(-5px);
     }
 
     &--active {
-      background-color: #ffff;
+      background-color: red;
     }
   }
 
   &__fig {
-    flex: 0 0 5.8rem;
+    flex: 0 0 3.2rem;
     border-radius: 50%;
     overflow: hidden;
-    height: 5.8rem;
-    margin-right: 2rem;
+    height: 3.2rem;
+    margin-right: 1rem;
     position: relative;
     backface-visibility: hidden;
 
@@ -37,8 +37,12 @@
       position: absolute;
       top: 0;
       left: 0;
-      background-image: linear-gradient(to right bottom, #ffff, #ffff);
-      opacity: 0.4;
+      background-image: linear-gradient(
+        to right bottom,
+        $background,
+        $font-color
+      );
+      opacity: 0.25;
     }
 
     img {
@@ -60,8 +64,8 @@
 
   &__title {
     grid-column: 1/-1;
-    font-size: 1.45rem;
-    color: #ffff;
+    font-size: 0.95rem;
+    color: $background;
     text-transform: uppercase;
     font-weight: 600;
 

@@ -32,9 +32,28 @@ export const createTutorialObject = function (data) {
 export const loadTutorial = async function (id) {
   try {
     const data = await AJAX(`${API_URL}${id}?key=${KEY}`);
-    console.log('this is the data', data);
     state.recipe = createTutorialObject(data);
-    console.log('this is our own state', state.recipe);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const loadSearchResults = async function (query) {
+  try {
+    state.search.query = query;
+
+    const data = await AJAX(`${API_URL}?search=${query}&key=${KEY}`);
+    console.log(data);
+
+    state.search.results = data.data.recipes.map((rec) => {
+      return {
+        id: rec.id,
+        title: rec.title,
+        publisher: rec.publisher,
+        image: rec.image_url,
+        ...(rec.key && { key: rec.key }),
+      };
+    });
   } catch (error) {
     console.log(error);
   }

@@ -75,6 +75,7 @@ input {
 .primary__navigation {
   background: hsla(213, 57%, 33%, 0.1);
   backdrop-filter: blur(1rem);
+  color: $font-color;
 }
 .mobile__nav__toggle {
   display: none;
