@@ -36,8 +36,9 @@ form {
   color: $font-color;
   font-size: $font-size-medium;
   display: flex;
-  padding: 0.15rem 1rem;
+  padding: 0.05rem 1.25rem;
   text-transform: uppercase;
+  height: 38px;
   grid-gap: 0.5vh;
 }
 .btn {
