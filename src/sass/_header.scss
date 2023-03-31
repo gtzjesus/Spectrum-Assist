@@ -84,6 +84,9 @@ input {
     color: $font-color-alternative;
     font-size: $font-size-medium;
   }
+  input {
+    height: 30px;
+  }
   .mobile-title {
     display: block;
     font-size: $font-size-small;
