@@ -67,22 +67,22 @@
 
   &__title {
     grid-column: 1/-1;
-    font-size: 1.25rem;
+    font-size: 1.35rem;
     color: $background;
     text-transform: uppercase;
-    font-weight: 800;
+    font-weight: 400;
 
     // This is how text is truncated!
-    text-overflow: ellipsis;
-    max-width: 30rem;
-    white-space: nowrap;
-    overflow: hidden;
+    // text-overflow: ellipsis;
+    // max-width: 30rem;
+    // white-space: nowrap;
+    // overflow: hidden;
   }
 
   &__publisher {
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     color: $background;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 200;
   }
 }
