@@ -127,6 +127,7 @@ input {
     background-repeat: no-repeat;
   }
   .links__container {
+    display: none;
     padding: 0;
     background: hsla(214, 58%, 95%, 0.1);
     backdrop-filter: blur(0rem);
