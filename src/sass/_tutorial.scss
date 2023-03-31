@@ -1,5 +1,6 @@
 .tutorial {
   background-color: steelblue;
+  width: 70vw;
 
   ///////////
   // FIGURE
@@ -38,9 +39,9 @@
     bottom: 0;
     top: 0;
     left: 50%;
-    transform: translate(-50%, 10%);
+    transform: translate(-50%, 15%);
     color: #fff;
-    font-size: $font-size-exsmall;
+    font-size: 1.35rem;
     text-transform: uppercase;
     width: 65%;
     line-height: 2.25;
@@ -49,7 +50,7 @@
     span {
       -webkit-box-decoration-break: clone;
       box-decoration-break: clone;
-      padding: 1.3rem 4rem;
+      padding: 0.65rem 1rem;
       background-image: linear-gradient(
         to right bottom,
         $background,
