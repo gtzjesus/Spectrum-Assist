@@ -5,14 +5,17 @@ import * as model from './model.js';
 import { async } from 'regenerator-runtime';
 import searchView from './views/searchView';
 
+/**
+ *  CONTROLLING INDIVIDUAL TUTORIAL
+ */
 const controlTutorials = async function () {
   try {
+    ////  GRAB ID FROM URL
     const id = window.location.hash.slice(1);
     if (!id) return;
     //// 0) UPDATE RESULTS VIEW TO MARK SELECTED SEARCH RESULTS
     // resultsView.update(model.getSearchResultsPage());
-
-    //// 2) LOADING TUTORIAL
+    //// 2) LOADING TUTORIAL (from model)
     await model.loadTutorial(id);
     //// 3) RENDERING TUTORIAL
     tutorialView.render(model.state.recipe);
@@ -20,12 +23,13 @@ const controlTutorials = async function () {
     console.log(error);
   }
 };
-
+/**
+ * CONTROLLING SEARCH RESULTS
+ */
 const controlSearchResults = async function () {
   try {
     //// 1) GET SEARCH QUERY
     const query = searchView.getQuery();
-    console.log(query);
     if (!query) return;
     //// 2) LOAD SEARCH RESULTS
     await model.loadSearchResults(query);

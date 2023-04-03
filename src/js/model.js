@@ -26,7 +26,7 @@ export const createTutorialObject = function (data) {
   };
 };
 /**
- * LOADING SEARCH RESULTS FROM QUERY GIVEN
+ * LOADING INDIVIDUAL TUTORIAL
  * @param {String} ID OBTAINED FROM URL
  */
 export const loadTutorial = async function (id) {
@@ -37,20 +37,25 @@ export const loadTutorial = async function (id) {
     console.log(error);
   }
 };
-
+/**
+ * LOADING SEARCH RESULTS FROM QUERY GIVEN
+ * @param {String} query OBTAINED FROM USER
+ */
 export const loadSearchResults = async function (query) {
   try {
+    //// 1) SET OUR QUERY
     state.search.query = query;
-
+    //// 2) AJAX CALL TO GRAB DATA
     const data = await AJAX(`${API_URL}?search=${query}&key=${KEY}`);
     console.log(data);
-
+    //// CREATE OUR STATE SEARCH RESULTS
     state.search.results = data.data.recipes.map((rec) => {
       return {
         id: rec.id,
         title: rec.title,
         publisher: rec.publisher,
         image: rec.image_url,
+        ingredients: rec.ingredients,
         ...(rec.key && { key: rec.key }),
       };
     });

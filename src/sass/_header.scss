@@ -119,7 +119,7 @@ input {
     grid-gap: 1.5em;
 
     transform: translateX(100%);
-    transition: transform 1250ms ease-out;
+    transition: transform 950ms ease-out;
   }
   .primary__navigation[data-visible='true'] {
     transform: translateX(0%);

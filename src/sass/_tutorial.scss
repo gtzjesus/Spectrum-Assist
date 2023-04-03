@@ -1,12 +1,11 @@
 .tutorial {
   background: #ffff;
-  height: 100%;
   width: 60vw;
 
   ///////////
   // FIGURE
   &__fig {
-    height: 18rem;
+    height: 14.5rem;
     position: relative;
     // transform: scale(1.04) translateY(-1px);
     transform-origin: top;
@@ -59,4 +58,32 @@
       );
     }
   }
+}
+
+.recipe__ingredients {
+  font-family: 'League Gothic', sans-serif;
+  height: 70vh;
+  background-color: $background;
+  color: $font-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+.heading--2 {
+  font-size: $font-size-large;
+  align-items: center;
+  border-bottom: 2px solid $font-color;
+  padding: 0.5rem;
+}
+.recipe__ingredient-list {
+}
+.recipe__ingredient {
+}
+.recipe__description {
+  display: block;
+  font-size: $font-size-small;
+  padding: 0.45rem 0;
+}
+.recipe__description span {
 }
